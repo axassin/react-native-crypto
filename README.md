@@ -12,11 +12,7 @@ Common encryption/decryption for react-native
 
 ## Installation
 ```sh
-npm install @trackforce/react-native-crypto
-```
-or
-```sh
-yarn add @trackforce/react-native-crypto
+yarn add https://github.com/axassin/react-native-crypto
 ```
 ### Linking Automatically
 ```sh
