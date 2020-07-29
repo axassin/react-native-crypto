@@ -5,15 +5,12 @@
 #import "Shared.h"
 #import "Aes.h"
 
-NSString const *kInitVector = @"pleaseginko12345";
-size_t const kKeySize = kCCKeySizeAES128;
-
 @implementation Aes
 
 + (NSData *) AES128CBC: (NSString *)operation data: (NSString *)data key: (NSString *)key iv: (NSString *)iv {
     // Convert hex string to hex data.
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
-    void const *initVectorBytes = [kInitVector dataUsingEncoding:NSUTF8StringEncoding].bytes;
+    void const *initVectorBytes = [iv dataUsingEncoding:NSUTF8StringEncoding].bytes;
     void const *contentBytes = [data dataUsingEncoding:NSUTF8StringEncoding].bytes;
     NSUInteger dataLength = [data dataUsingEncoding:NSUTF8StringEncoding].length;
     
